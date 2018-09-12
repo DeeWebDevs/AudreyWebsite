@@ -36,7 +36,7 @@
     }
 
     #lol5 {
-       height: 100vh; 
+      height: 100vh;
     }
 
     .mySlides {
@@ -98,11 +98,12 @@
     <br>
     <br>
     <div class="row" id="title_holder">
-        <br>
-        <br>
-        <h1 style="color: white; font-family: verdana" class="text-center">Text Area</h1>
+      <br>
+      <br>
+      <h1 style="color: white; font-family: verdana" class="text-center">Text Area</h1>
     </div>
     <br>
+
     <div class="row">
       <!-- <div class="col-md-4 "><p></p></div> -->
       <div class="col-md-8 col-md-offset-2 " id="title_holder">
@@ -124,79 +125,122 @@
 
 
 
-  
-      <div id="lol2" name="portion" class="testBack"> section 1</div>
-      
-  
 
-    <div id="lol3" name="portion" class="testBack" style="z-index:1000">
-      <ngb-carousel *ngIf="images" style="margin: 0 auto; ">
-        <ng-template ngbSlide>
-          <img src="../../src/app/images/l1.jpg" alt="Random first slide" style="height: 100vh; width: 100vw">
-          <div class="carousel-caption">
-            <h3>Mustang GT 350</h3>
-          </div>
-        </ng-template>
-        <ng-template ngbSlide>
-          <img src="../../src/app/images/l2.jpg" alt="Random second slide" style="height: 100vh; width: 100vw">
-          <div class="carousel-caption">
-            <h3>Mclarin P1</h3>
-          </div>
-        </ng-template>
-        <ng-template ngbSlide>
-          <img src="../../src/app/images/l3.jpg" alt="Random third slide" style="height: 100vh; width: 100vw">
-          <div class="carousel-caption">
-            <h3>WRX Sti</h3>
-          </div>
-        </ng-template>
-        <ng-template ngbSlide>
-          <img src="../../src/app/images/l6.jpg" alt="Random fourth slide" style="height: 100vh; width: 100vw">
-          <div class="carousel-caption">
-            <h3>Mustang GT</h3>
-          </div>
-        </ng-template>
-      </ngb-carousel>
-    </div>
-    <!-- second -->
-    <div id="lol4" name="portion" class="testBack" style="z-index:1000">
-      <br>
-      <ngb-carousel style="margin: 0 auto; ">
-        <ng-template ngbSlide *ngFor="let prod of export_data">
-          <h3>Showing products</h3>
-          <div class="col-md-6 col-md-offset-3 col-sm-12">
-            <div class="thumbnail">
-              <img class="img-rounded" src="../../src/app/images/{{prod.image}}">
-              <div class="caption">
-                <!-- <h4 class="text text-info"> -->
-                <!-- <a   (click)="productDetail(prod._id)">{{prod.pName}}</a> -->
-                <!-- <br/> -->
-                <!-- <span class="badge ratingcolor glyphicon glyphicon-star-empty">>{{prod.pRating}}&#9733;</span> -->
-                <!-- </h4> -->
-                <!-- <br> -->
-                <p>{{prod.pDescription}}</p>
-                <br>
-                <!-- <div div class="space">
+  <div id="lol2" name="portion" class="testBack"> section 1</div>
+
+
+
+  <div id="lol3" name="portion" class="testBack" style="z-index:1000">
+    <ngb-carousel *ngIf="images" style="margin: 0 auto; ">
+      <ng-template ngbSlide>
+        <img src="../../src/app/images/l1.jpg" alt="Random first slide" style="height: 100vh; width: 100vw">
+        <div class="carousel-caption">
+          <h3>Mustang GT 350</h3>
+        </div>
+      </ng-template>
+      <ng-template ngbSlide>
+        <img src="../../src/app/images/l2.jpg" alt="Random second slide" style="height: 100vh; width: 100vw">
+        <div class="carousel-caption">
+          <h3>Mclarin P1</h3>
+        </div>
+      </ng-template>
+      <ng-template ngbSlide>
+        <img src="../../src/app/images/l3.jpg" alt="Random third slide" style="height: 100vh; width: 100vw">
+        <div class="carousel-caption">
+          <h3>WRX Sti</h3>
+        </div>
+      </ng-template>
+      <ng-template ngbSlide>
+        <img src="../../src/app/images/l6.jpg" alt="Random fourth slide" style="height: 100vh; width: 100vw">
+        <div class="carousel-caption">
+          <h3>Mustang GT</h3>
+        </div>
+      </ng-template>
+    </ngb-carousel>
+  </div>
+  <!-- second -->
+  <div id="lol4" name="portion" class="testBack" style="z-index:1000">
+    <br>
+    <ngb-carousel style="margin: 0 auto; ">
+      <ng-template ngbSlide *ngFor="let prod of export_data">
+        <!-- <h3>Showing products</h3> -->
+        <div class="col-md-6 col-md-offset-3 col-sm-7">
+          <div class="thumbnail">
+            <img class="img-rounded" src="../../src/app/images/{{prod.image}}">
+            <div class="caption">
+              <!-- <h4 class="text text-info"> -->
+              <!-- <a   (click)="productDetail(prod._id)">{{prod.pName}}</a> -->
+              <!-- <br/> -->
+              <!-- <span class="badge ratingcolor glyphicon glyphicon-star-empty">>{{prod.pRating}}&#9733;</span> -->
+              <!-- </h4> -->
+              <!-- <br> -->
+              <p>{{prod.pDescription}}</p>
+              <br>
+              <!-- <div div class="space">
                                   <button class=" btn btn-primary" (click)="addToCart(prod)">Add to Cart</button>
                                   <b>{{prod.price | currency: 'INR' : 'symbol'}}</b>
                               </div> -->
-              </div>
             </div>
           </div>
-        </ng-template>
-
-      </ngb-carousel>
-
-    </div>
-
-    <div id="lol5" name="portion" class="container-fluid">
-      <div class="row">
-        <div class="col-md-12" style="border: 2px blue" id="imgTest">
-          asdasd
         </div>
+      </ng-template>
+
+    </ngb-carousel>
+
+  </div>
+
+  <div id="lol5" name="portion" class="container-fluid">
+    <div class="row" id="imgTest" style="overflow: auto">
+      <div class="testgrey col-md-3" style=" overflow: hidden;">
+        <form>
+
+          <div class="form-group">
+              <h1 class="text-center" style="color:white; margin-top: 20vh">{{currentCollection}}</h1>
+              <select (change)="collectionCall()" [(ngModel)]="test" name="categ" class="form-control" style="margin-top: 20vh">
+              <option value="" >--select--</option>
+              <option value="1">O1</option>
+              <option value="2">O2</option>
+              <option value="3">O3</option>
+            </select>
+          </div>
+          
+        </form>
+
+
       </div>
 
+
+      <div  class="col-md-9" style="border: 2px blue" style="margin-top: 20vh; overflow: auto;">
+          
+
+
+
+        <div class="col-md-3 col-sm-3" *ngFor="let prod of export_data" style="display: inline-block;">
+          <div class="thumbnail">
+            <img class="img-rounded" src="../../src/app/images/{{prod.image}}">
+            <div class="caption">
+              <!-- <h4 class="text text-info"> -->
+              <!-- <a   (click)="productDetail(prod._id)">{{prod.pName}}</a> -->
+              <!-- <br/> -->
+              <!-- <span class="badge ratingcolor glyphicon glyphicon-star-empty">>{{prod.pRating}}&#9733;</span> -->
+              <!-- </h4> -->
+              <!-- <br> -->
+              <p>{{prod.pDescription}}</p>
+              <br>
+              <!-- <div div class="space">
+                                      <button class=" btn btn-primary" (click)="addToCart(prod)">Add to Cart</button>
+                                      <b>{{prod.price | currency: 'INR' : 'symbol'}}</b>
+                                  </div> -->
+            </div>
+          </div>
+
+        </div>
+      </div>
     </div>
+
+  </div>
 
 
 </body>
+
 </html>
