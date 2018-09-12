@@ -1,0 +1,372 @@
+
+  
+  a {
+    display: block;
+    color: red;
+    margin-bottom: 1em;
+  }
+  
+html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      overflow-x: hidden;
+      font-family: "Helvetica Neue",sans-serif;
+      font-weight: lighter;
+
+
+      /* font: 20pt verdana; */
+
+}
+ 
+
+
+header {
+      /* width: 100%; */
+      /* height: 100vh; */
+      
+      background: url(./images/lambo.jpg) no-repeat 50% 50%;
+      background-size: cover;
+}
+.imgDetails{
+      position: absolute;
+      bottom:0px;
+      right:25%;
+      left:50%;
+      margin-left:-350px;
+}
+.content {
+      width: 94%;
+      margin: 4em auto;
+      font-size: 20px;
+      line-height: 30px;
+      text-align: justify;
+}
+ 
+.logo {
+      line-height: 25px;
+      position: fixed;
+      float: left;
+      margin: 16px 46px;
+      color: #fff;
+      font-weight: bold;
+      font-size: 20px;
+      letter-spacing: 2px;
+}
+ 
+nav {
+      position: fixed;
+      width: 100%;
+      line-height: 20px;
+}
+ 
+nav ul {
+      line-height: 20px;
+      list-style: none;
+      background: rgba(0, 0, 0, 0);
+      /* overflow: hidden; */
+      color: #fff;
+      padding: 0;
+      text-align: right;
+      margin: 0;
+      padding-right: 40px;
+      transition: 1s;
+}
+ 
+nav.black ul {
+  background: #000;
+}
+
+nav.black {
+  opacity: .8;
+  z-index: 10;
+
+}
+ 
+nav ul li {
+      display: inline-block;
+      padding: 16px 40px;;
+}
+ 
+nav ul li a {
+      text-decoration: none;
+      color: #fff;
+      font-size: 13px;
+}
+nav ul >li a:hover{
+      animation-name: text_fadein;
+      animation-duration: 0.3s;
+      animation-fill-mode: forwards;
+    }
+
+    
+    
+ 
+.menu-icon {
+      line-height: 10px;
+      width: 100%;
+      background: #000;
+      text-align: right;
+      box-sizing: border-box;
+      padding: 15px 20px;
+      cursor: pointer;
+      color: #fff;
+      display: none;
+}
+
+
+
+
+@media(max-width: 786px) {
+ 
+      .logo {
+            position: fixed;
+            top: 0;
+            margin-top: 10px;
+            font-size: 15px;
+
+      }
+ 
+      nav ul {
+            max-height: 0px;
+            background: #000;
+      }
+ 
+      nav.black ul {
+            background: #000;
+      }
+ 
+      .showing {
+            max-height: 34em;
+      }
+ 
+      nav ul li {
+            box-sizing: border-box;
+            width: 100%;
+            padding: 24px;
+            text-align: center;
+      }
+ 
+      .menu-icon {
+            display: block;
+      }
+
+      .menu{
+            display: none
+      }
+
+       p{
+            font-size: 10px
+      
+        }     
+
+
+  
+ 
+}
+
+s{
+      font-size: 15px
+
+  }    
+
+.page1{
+     background-image: url(./images/road1.jpg) 
+}
+
+/* My Stuff */
+
+#imgTest{
+      background-image: url(./images/l4.jpg);
+      background-attachment: auto;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 100wh;
+      height: 100vh;
+}
+.mh1 div {
+      height: 40vh; /* 30% of viewport height*/
+    }
+
+.testBack{
+      background: black
+    }
+.testgrey{
+      background: grey
+    }
+
+#title_holder h1 {
+      margin: 0 auto;
+
+  }    
+
+  /* .cursive{
+  font-family: "Brush Script MT", cursive; font-size: 24px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px; } h3 { font-family: "Brush Script MT", cursive; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 15.4px; } p { font-family: "Brush Script MT", cursive; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 20px; } blockquote { font-family: "Brush Script MT", cursive; font-size: 21px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 30px; } pre { font-family: "Brush Script MT", cursive; font-size: 13px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 18.5714px;
+  } */
+/* ------^^-------- */
+
+
+a {
+  display: block;
+  color: red;
+  margin-bottom: 1em;
+}
+
+
+/* Carousel EXAMPLE CSS */
+
+.carousel, .item, .active {
+      height:100%;
+      }
+      .carousel-inner {
+      height:100%;
+      }
+      .carousel {
+      margin-bottom: 60px;
+      }
+      .carousel-caption {
+      z-index: 10;
+      }
+      .carousel .item {
+      background-color: #777;
+      }
+      .carousel .carousel-inner .bg {
+      background-repeat:no-repeat;
+      background-size:cover;
+      }
+      .carousel .carousel-inner .bg1 {
+      background-image:url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/158072/spiderweb.jpg');
+      background-position: center top;
+      }
+      .carousel .carousel-inner .bg2 {
+      background-image:url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/158072/hearthand.jpg');
+      background-position: center center;
+      }
+      .carousel .carousel-inner .bg3 {
+      background-image:url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/158072/woman-camera.jpg');
+      background-position: center bottom;
+      }
+/* NAV STYLING */
+
+li a:hover {
+      border-bottom: 2px solid orange;
+      text-decoration: none; }
+
+
+
+      #section05 a {
+            padding-top: 70px;
+          }
+          #section05 a span {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            width: 24px;
+            height: 24px;
+            margin-left: -12px;
+            border-left: 1px solid #fff;
+            border-bottom: 1px solid #fff;
+            -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+            -webkit-animation: sdb05 1.5s infinite;
+            animation: sdb05 1.5s infinite;
+            box-sizing: border-box;
+          }
+          @-webkit-keyframes sdb05 {
+            0% {
+              -webkit-transform: rotate(-45deg) translate(0, 0);
+              opacity: 0;
+            }
+            50% {
+              opacity: 1;
+            }
+            100% {
+              -webkit-transform: rotate(-45deg) translate(-20px, 20px);
+              opacity: 0;
+            }
+          }
+          @keyframes sdb05 {
+            0% {
+              transform: rotate(-45deg) translate(0, 0);
+              opacity: 0;
+            }
+            50% {
+              opacity: 1;
+            }
+            100% {
+              transform: rotate(-45deg) translate(-20px, 20px);
+              opacity: 0;
+            }
+          }
+/* DROPDOWN */
+
+.dropbtn {
+      background-color:grey;
+      color: white;
+      padding: 16px;
+      font-size: 13px;
+      border: none;
+      cursor: pointer;
+      background-color: Transparent;
+}
+  
+  .dropbtn:hover, .dropbtn:focus {
+       background-color: grey; 
+      text-decoration: underline;
+      text-decoration-color: orange;
+      text-decoration-line: 2px
+  }
+  
+  .dropdown {
+      position: relative;
+      display: inline-block;
+      z-index: 20;
+
+  }
+  
+  .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color:orange;
+      min-width: 160px;
+      overflow: auto;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index: 1;
+  }
+  
+  .dropdown-content a {
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+  }
+  
+  .dropdown a:hover {background-color: #ddd;}
+  
+  .show {display: block;}
+
+
+  /* PARRALAX */
+
+  #top-image {
+      /* background-image: url(./) -25px -50px; */
+      background-image: url(./images/race.jpg)-25px -50px; ;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 0;
+      height: 100%;
+      background-size: calc(100% + 50px);
+    }
+
+    #lol2{
+      height:100vh;
+      width:100%;
+      /* margin: 0 auto; */
+      background-image: url(./images/race.jpg);
+      
+    }  
+
+    
+    
