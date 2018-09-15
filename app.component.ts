@@ -1,17 +1,19 @@
-import { Component } from '@angular/core';
+import { Component, ViewEncapsulation } from '@angular/core';
 import * as $ from 'jquery';
 import { NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';
 import {Product} from './shared/products'
-
+import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
-  providers: [NgbCarouselConfig]  // add NgbCarouselConfig to the component providers
+  providers: [NgbCarouselConfig] 
 
 })
+
 export class AppComponent {
+
   title = 'testFullPage';
   images = [1, 2, 3, 4].map(() => `https://picsum.photos/900/500?random&t=${Math.random()}`);
   test='';
@@ -56,7 +58,7 @@ export class AppComponent {
   v9: Product
   v10: Product
   
-  constructor(config: NgbCarouselConfig) {
+  constructor(config: NgbCarouselConfig, private modalService: NgbModal) {
     // customize default values of carousels used by this component tree
     config.interval = 10000;
     config.wrap = false;
@@ -64,8 +66,35 @@ export class AppComponent {
     config.pauseOnHover = false;
   }
 
+  //MODAL WINDOW
+  closeResult: string;
+
+  open(content) {
+    console.log("ADASD")
+    this.modalService.open(content, {ariaLabelledBy: 'modal-basic-title'}).result.then((result) => {
+      this.closeResult = `Closed with: ${result}`;
+    }, (reason) => {
+      this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;
+    });
+  }
+
+  private getDismissReason(reason: any): string {
+    if (reason === ModalDismissReasons.ESC) {
+      return 'by pressing ESC';
+    } else if (reason === ModalDismissReasons.BACKDROP_CLICK) {
+      return 'by clicking on a backdrop';
+    } else {
+      return  `with: ${reason}`;
+    }
+  }
+//-----------END MODAL-------------
 
   ngOnInit(){
+
+    //MODAL POPUP
+    jQuery(document).ready(function(e) {
+      jQuery('#mymodal').trigger('click');
+  });
     //---------
         $(document).ready(function() {
           $(".menu-icon").on("click", function() {
